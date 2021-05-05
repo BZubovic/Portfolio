@@ -194,16 +194,16 @@
     <div class="contact-form">
        <form name="contact" method="POST" data-netlify="true">
         <label for="">Name:<br>  
-            <input name="name" type="text">
+            <input required name="name" type="text">
         </label>
         <label for="">Subject:<br> 
-            <input name="subject" type="Subject">
+            <input required name="subject" type="Subject">
         </label>
         <label>Your message:<br> 
            <textarea name="message"></textarea>
         </label>
            
-           <input class="submit" type="submit" value="Send">
+           <input required class="submit" type="submit" value="Send">
            <div class="close">x</div>
            
            </form>
