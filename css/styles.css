@@ -290,18 +290,26 @@ nav a:hover{
 }
 
 .form-container{
+    z-index: 999999999999999999999999999999999;
     position:absolute;
     top:0;
     left:0;
+    bottom:0;
+    right:0;
     width:100vw;
-    height:100vh;
+    height:100%;
+    min-height:100%;
     display:flex;
     visibility: hidden;
-    
+    overflow-y: scroll;
     background:rgba(0,0,0,0.0);
     transition: all 0.4s ;
     align-items: center;
 
+}
+.form-container::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 .contact-form{
     padding:40px 0px;
@@ -316,13 +324,14 @@ nav a:hover{
     -webkit-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     
-    margin:0 auto;
+    margin:auto auto;
     border-radius:30px;
 }
 .slide-in-form{
     transform: translateY(0%);
 }
 .contact-form form{
+    
     width:90%;
     max-width:500px;
     margin-top:15px;
@@ -340,6 +349,7 @@ nav a:hover{
     padding-top:10px;
     padding-bottom:10px;
     padding-left:15px;
+    padding-right:15px;
     border:1px solid transparent;
 }
 .contact-form textarea{
@@ -347,6 +357,7 @@ nav a:hover{
     padding-top:10px;
     padding-bottom:10px;
     padding-left:15px;
+    padding-right:15px;
     border-width: 0px;
     border-radius:15px;
     margin-top:4px;
@@ -384,6 +395,10 @@ nav a:hover{
 .contact-form textarea:focus{
     outline:none;
     border:1px solid black;
+}
+.push{
+    position:absolute;
+    top:0;
 }
 .contact-form .submit:hover{
     transform: translateY(-0.35rem) !important;
