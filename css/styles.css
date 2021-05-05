@@ -125,12 +125,16 @@ h2{
     font-size:clamp(2rem, 2vw, 2.4rem);
     line-height: 1.6;
     margin-bottom:0.7em;
+    font-weight: 400;
 }
 p{
     position: relative;
     font-size:clamp(2rem, 2vw, 2.4rem);
     line-height: 1.6;
     margin-bottom:1.2em;
+}
+.contact-p{
+    line-height: 2.1;
 }
 .content-left p{
     white-space: nowrap;
@@ -182,7 +186,7 @@ header{
 .logo{
     z-index:9999999999;
 }
-.logo a{
+.logo svg{
     opacity:1;
     transition:opacity 0.3s;
     max-width: clamp(4rem, 6vw, 7rem);
@@ -272,6 +276,14 @@ nav a:hover{
     
     
     
+}
+
+.highlight svg{
+    margin-right:8px;
+}
+.phone-ico{
+    margin-top:8px;
+    margin-left:2px;
 }
 nav ul{
     display:flex;
@@ -614,12 +626,13 @@ h1{
   
 }
 @media(max-height:700px){
+    
+    .content-wrapper img{
+        max-width:90%; 
+        margin-bottom: 0rem;
+    }
     .hero{
         max-width:70% !important; 
-    }
-    .content-wrapper img{
-       
-        margin-bottom: 0rem;
     }
 }
 
