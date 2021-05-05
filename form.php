@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { // checks whether a POST request actually exists or not.
@@ -11,3 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // checks whether a POST request act
 
 }
 ?>
+</html>
+
+
