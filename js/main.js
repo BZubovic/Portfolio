@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
    /* variables */
-   const loader=document.querySelector(".loader")
+   const loader=document.querySelector(".loader");
+   const contact=document.querySelector(".popup-form");
+   const overlay=document.querySelector(".form-container");
+   const closeform=document.querySelector(".close");
    const menu= document.querySelector(".menu-icon");
    const menucolor=document.querySelectorAll(".menu-icon span")
    const mobilemenu = document.querySelector(".mobile-menu");
@@ -49,7 +52,27 @@ mobile_menu_item.forEach(function(element, index){
 
 loader.classList.add("loaded");
 
+ /* contact form */   
+
+contact.addEventListener("click",function openModal(params) {
+    fullpage_api.setAllowScrolling(false);
+    document.querySelector(".form-container").classList.add("open-modal");
     
+    document.querySelector(".contact-form").classList.add("slide-in-form");
+
+});
+closeform.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+function closeModal(event) {
+    if (event.target === this) {
+        fullpage_api.setAllowScrolling(true);
+        document.querySelector(".form-container").classList.remove("open-modal");
+        document.querySelector(".contact-form").classList.remove("slide-in-form");
+        }
+}
+
+
 
 
 

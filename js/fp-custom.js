@@ -11,11 +11,11 @@ new fullpage('#fullpage', {
     easingcss3: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
     scrollingSpeed: 1000,
     scrollHorizontally: true,
-
+    css3:true,
 
     onLeave: function(origin, destination, direction){
 		var leavingSection = this;
-
+        
 //-----------------line -  active section indicators animations--------------------//
      
             line.forEach(function(element, index){

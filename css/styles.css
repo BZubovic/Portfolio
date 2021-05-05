@@ -26,6 +26,8 @@ html{
     
 
 }
+
+
 .loader{
     z-index: 999999999;
     position: fixed;
@@ -239,7 +241,7 @@ nav a:hover{
 
 
 .content-wrapper{
-    position: relative;
+    position: static;
     width:100%;
     display:flex;
     flex-direction: row;
@@ -260,6 +262,7 @@ nav a:hover{
 
 
 .button{
+    cursor: pointer;
     display:inline-block;
     font-size:clamp(1.8rem, 2vw, 2.2rem);
     
@@ -284,6 +287,119 @@ nav a:hover{
 .phone-ico{
     margin-top:8px;
     margin-left:2px;
+}
+
+.form-container{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    visibility: hidden;
+    
+    background:rgba(0,0,0,0.0);
+    transition: all 0.4s ;
+    align-items: center;
+
+}
+.contact-form{
+    padding:40px 0px;
+   position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-primary-900);
+    width:90vw;
+    max-width:600px;
+    transform: translateY(200%);
+    -webkit-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    
+    margin:0 auto;
+    border-radius:30px;
+}
+.slide-in-form{
+    transform: translateY(0%);
+}
+.contact-form form{
+    width:90%;
+    max-width:500px;
+    margin-top:15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.contact-form input{
+    font-family:"Rubik","sans-serif";
+    border-width: 0px;
+    border-radius:15px;
+    margin-top:4px;
+    margin-bottom:12px;
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:15px;
+    border:1px solid transparent;
+}
+.contact-form textarea{
+    font-family:"Rubik","sans-serif";
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:15px;
+    border-width: 0px;
+    border-radius:15px;
+    margin-top:4px;
+    margin-bottom:12px;
+    width:100% !important;
+    min-height:120px;
+    resize:none;
+    border:1px solid transparent;
+}
+.contact-form label{
+    font-family:"Rubik","sans-serif";
+    letter-spacing: 1px;
+    font-weight:300;
+    width:100%;
+    color:white;
+    font-size:1.8rem;
+}
+.contact-form .submit{
+    border:1px solid transparent;
+    cursor: pointer;
+    width:60%;
+    max-width:200px;
+    align-self: center;
+    background:white;
+    font-size:1.8rem;
+    color:var(--color-text);
+    font-weight: 600;
+    font-family:"Rubik","sans-serif";
+    border-radius:9000px;
+    padding-top:12px;
+    padding-bottom:12px;
+    transition: transform 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border:1px solid black;
+}
+.contact-form .submit:hover{
+    transform: translateY(-0.35rem) !important;
+}
+.close{
+    cursor:pointer;
+    position:absolute;
+    right:30px;
+    top: 9px;
+    font-size:3rem;
+    color:white;
+}
+.open-modal{
+   
+    visibility:visible;
+    background:rgba(0,0,0,0.4);
 }
 nav ul{
     display:flex;
