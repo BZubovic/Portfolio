@@ -10,3 +10,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // checks whether a POST request act
     mail($send_to, $user_subject, $subject_message);
 
 }
+?>
