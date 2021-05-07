@@ -1,3 +1,6 @@
+setTimeout(() => {
+    document.querySelector(".dot-pulse").style.opacity="1";
+}, 1000);
 document.addEventListener("DOMContentLoaded", function() {
    /* variables */
    const loader=document.querySelector(".loader");

@@ -44,6 +44,7 @@ new fullpage('#fullpage', {
 
         //on leave slide wait 200ms and animate next slide elements into view
          setTimeout(function(){ 
+            contentleft[destination.index].querySelector(".title").style.transform="translateX(0)";
             contentleft[destination.index].querySelector(".heading").style.transform="translateX(0)";
             contentleft[destination.index].querySelector(".highlight").style.transform="translateX(0)";
             contentleft[destination.index].querySelector(".button").style.transform="translateX(0)";    
@@ -57,7 +58,7 @@ new fullpage('#fullpage', {
     //after slide finished scrolling, translate previous slide elements outside
     afterLoad: function(origin, destination, direction){
 		var loadedSection = this;
-     
+        contentleft[origin.index].querySelector(".title").style.transform="translateX(-200%)";
         contentleft[origin.index].querySelector(".heading").style.transform="translateX(-300%)";
          contentleft[origin.index].querySelector(".highlight").style.transform="translateX(-200%)";
          contentleft[origin.index].querySelector(".button").style.transform="translateX(-200%)";
@@ -71,7 +72,7 @@ new fullpage('#fullpage', {
     afterRender: function(){
 		var loadedSection = this;
         const active=fullpage_api.getActiveSection();
-         
+        contentleft[active.index].querySelector(".title").style.transform="translateX(0)";
          contentleft[active.index].querySelector(".heading").style.transform="translateX(0)";
          contentleft[active.index].querySelector(".highlight").style.transform="translateX(0)";
          contentleft[active.index].querySelector(".button").style.transform="translateX(0)";
